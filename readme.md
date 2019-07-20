@@ -15,7 +15,7 @@ You can find the endpoints for new elements by loading linkedin.com (logged in),
 
 From there there the endpoints will be in the source code. 
 
-![Image of linkedin source](https://imgur.com/4QbdnI3)
+![Image of linkedin source](https://quesoportfolio.s3-us-west-2.amazonaws.com/Screen+Shot+2019-07-20+at+3.25.36+PM.png)
 
 From there you can use the Dev Tools network tab to find the headers that are used. Usually it requires a `crsf-token` header with a value found in the cookie from when you login. There is a helper function for this located in `src/utils/helpers` called `getJSESSIONFromJar`
 
