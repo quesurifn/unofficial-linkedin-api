@@ -40,7 +40,7 @@ const client = require('unoffical-linkedin-api')
         const identifier = client.getProfileIdentifierFromURI(profileURI)
 
         /* The second parameter, if true, uses the transformer to remove proprietary linkedin junk and 
-        * also get's more skills and experience. The skills and experience initially returned are limited.
+        * also gets more skills and experience. The skills and experience initially returned are limited.
         */
 
         const profile    =  client.getProfileById(identifier, false)
