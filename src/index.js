@@ -28,10 +28,9 @@ const getProfileById = (profileID, light = false) => {
             if(light) {
                 resolve(JSON.parse(response.body))
             } else {
-                resolve(JSON.parse(transformer(response)))
+                resolve(JSON.parse(transformer(response, profileID)))
             }
 
-  
         } catch (err) {
             reject(err)
         }  
