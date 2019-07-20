@@ -1,14 +1,12 @@
-const rq = require('request');
-const cookieJar = require('./utils/cookieJar.js').getCookieJar()
-
 const { parseLinkedinUrl, requestPromise} = require('./utils/helpers')
+const {transformer} = require('./utils/transformer')
 
-const login = () => {
+const login = (email, password) => {
     return new Promise(async (resolve, reject) => {
-        let cookieResponse = null, loginResponse = null
+        let loginResponse = null
         try {
-            cookieResponse = await requestPromise(cookieOptions)
-            const loginOptions = getComputedloginOptions(cookieResponse)
+            await requestPromise(cookieOptions)
+            const loginOptions = getComputedloginOptions(email, password)
             loginResponse  = await requestPromise(loginOptions)
 
             resolve(loginResponse)
@@ -18,19 +16,23 @@ const login = () => {
     })
 }
 
-const getProfileById = (profileID) => {
+const getProfileById = (profileID, light = false) => {
     return new Promise(async (resolve, reject) => {
         let optionsCopy = getComputedApiRequestOptions()
         const url = `${optionsCopy.uri}/identity/profiles/${profileID}/profileView`
         optionsCopy.uri = url
-
         let response = null;
         try {
             response = await requestPromise(optionsCopy)
-            resolve(JSON.parse(response.body))
+            
+            if(light) {
+                resolve(JSON.parse(response.body))
+            } else {
+                resolve(JSON.parse(transformer(response)))
+            }
+
+  
         } catch (err) {
-            console.log('No Resolve', err)
-            Sentry.captureException(err, 'getProfileById');
             reject(err)
         }  
     })
@@ -87,7 +89,6 @@ const getURIFromEmail = (emailAddress) => {
             } else {
                 return reject(false)
             }
-
         } catch(err) {
             reject(err)
         }

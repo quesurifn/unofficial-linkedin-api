@@ -1,6 +1,6 @@
 const {getMoreExperience, getMoreSkills} = require('../index')
 
-const linkedinProfileTransformer = (profile, identifier) => {
+const transformer = (profile, identifier) => {
     return new Promise(async (resolve, reject) => {
         let publications = null, volunteerExperience = null
         languages = null , projects = null ,education = null,

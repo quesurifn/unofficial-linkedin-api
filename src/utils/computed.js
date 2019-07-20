@@ -16,7 +16,7 @@ const getComputedApiRequestOptions = () => {
     }
 }
 
-const getComputedloginOptions = (email, pasword) => {
+const getComputedloginOptions = (email, password) => {
     return {
         uri: 'https://www.linkedin.com/uas/authenticate',
         headers: {
