@@ -46,5 +46,6 @@ module.exports = {
     sleep,
     randomBetween3and5,
     getJSESSIONFromJar,
-    parseLinkedinUrl
+    parseLinkedinUrl,
+    requestPromise
 }
