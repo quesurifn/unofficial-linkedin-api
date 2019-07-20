@@ -1,6 +1,6 @@
 {
   "name": "unofficial-linkedin-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unofficial linkedin api for Node. Use at your own risk. ",
   "main": "src/index.js",
   "directories": {
