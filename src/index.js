@@ -84,14 +84,18 @@ const getURIFromEmail = (emailAddress) => {
         
             const parsedUrl = parseLinkedinUrl(href)
             if(parsedUrl) {
-                return resolve(parsedUrl)
+                resolve(parsedUrl)
             } else {
-                return reject(false)
+                reject(false)
             }
         } catch(err) {
             reject(err)
         }
     })
+}
+
+const getProfileIdentifierFromURI = (email) => {
+    return email.split("/in/")[1] 
 }
 
 module.exports = {
@@ -100,4 +104,5 @@ module.exports = {
     getMoreSkills,
     getMoreExperience,
     getURIFromEmail,
+    getProfileIdentifierFromURI
 }
