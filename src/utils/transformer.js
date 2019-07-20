@@ -155,5 +155,5 @@ const transformer = (profile, identifier) => {
 
 
 module.exports = {
-    linkedinProfileTransformer
+    transformer
 }
