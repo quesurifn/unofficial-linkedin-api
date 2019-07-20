@@ -16,7 +16,7 @@ const getComputedApiRequestOptions = () => {
     }
 }
 
-const getComputedloginOptions = () => {
+const getComputedloginOptions = (email, pasword) => {
     return {
         uri: 'https://www.linkedin.com/uas/authenticate',
         headers: {
@@ -27,8 +27,8 @@ const getComputedloginOptions = () => {
             "Accept-Language": "en-us",
         },
         form: {
-            "session_key": "robbarnes82@gmail.com",
-            "session_password": 'newgeneral458963',
+            "session_key": email,
+            "session_password": password,
             "JSESSIONID": getJSESSIONFromJar()
         },
         method: 'POST'

@@ -11,9 +11,7 @@ const randomBetween3and5 = () => {
 
 const getJSESSIONFromJar = (voyager = false) => {
     const cookieString = cookieJar.getCookieString(cookieOptions.uri)
-
     if(voyager) {
-        console.log(`${cookieString.split(';')[0].split('=')[1].replace(/"/g, '')}`)
         return `${cookieString.split(';')[0].split('=')[1].replace(/"/g, '')}`
     } 
     return `"${cookieString.split(';')[1].split('=')[1]}"`
@@ -34,7 +32,6 @@ const requestPromise = (options) => {
         await sleep(randomBetween3and5)
         request(options.uri, options, async (error, response, body) => {
             if(error || String(response.statusCode).charAt(0) !== "2" && String(response.statusCode).charAt(0) !== "3" || body.indexOf('<h1>Please sign in</h1>') > -1)  {
-                console.log('error')
                 reject(error || response)
             }
             resolve(response)
