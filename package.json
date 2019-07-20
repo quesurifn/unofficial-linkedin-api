@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/quesurifn/unofficial-linkedin-api/issues"
   },
-  "homepage": "https://github.com/quesurifn/unofficial-linkedin-api#readme"
+  "homepage": "https://github.com/quesurifn/unofficial-linkedin-api#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }
