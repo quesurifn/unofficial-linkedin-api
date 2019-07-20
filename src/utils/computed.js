@@ -1,4 +1,4 @@
-const {getJSESSIONFromJar} = require('./helpers')
+const { getJSESSIONFromJar } = require('./helpers')
 
 const getComputedApiRequestOptions = () => {
     return {

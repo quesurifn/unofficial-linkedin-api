@@ -1,4 +1,4 @@
-const {getMoreExperience, getMoreSkills} = require('../index')
+const { getMoreExperience, getMoreSkills } = require('../index')
 
 const transformer = (profile, identifier) => {
     return new Promise(async (resolve, reject) => {

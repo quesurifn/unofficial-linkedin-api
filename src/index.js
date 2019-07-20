@@ -1,5 +1,5 @@
-const { parseLinkedinUrl, requestPromise} = require('./utils/helpers')
-const {transformer} = require('./utils/transformer')
+const { parseLinkedinUrl, requestPromise } = require('./utils/helpers')
+const { transformer } = require('./utils/transformer')
 
 const login = (email, password) => {
     return new Promise(async (resolve, reject) => {
