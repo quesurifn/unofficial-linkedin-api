@@ -1,0 +1,28 @@
+{
+  "name": "unofficial-linkedin-api",
+  "version": "1.0.0",
+  "description": "Unofficial linkedin api for Node. Use at your own risk. ",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quesurifn/unofficial-linkedin-api.git"
+  },
+  "keywords": [
+    "linkedin",
+    "api",
+    "client",
+    "unofficial"
+  ],
+  "author": "kyle.c.r.fahey@gmail.com",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/quesurifn/unofficial-linkedin-api/issues"
+  },
+  "homepage": "https://github.com/quesurifn/unofficial-linkedin-api#readme"
+}
